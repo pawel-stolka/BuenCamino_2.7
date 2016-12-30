@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    Paweł Stolka<br />
+    Wrocław<br />
+    Poland <br />
+</address>
+
+<address>
+    <abbr title="Phone">
+        @Html.Label(" ", new { @class = "glyphicon glyphicon-phone-alt" })
+    </abbr>
+    997<br/>
+    <strong>Email</strong>
+    <img src="~/Content/img/pawel.stolkaEmail.PNG" width="163" height="17"/> <br/>
+</address>

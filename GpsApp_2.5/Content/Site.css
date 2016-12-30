@@ -1,0 +1,106 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('img/cartographer_@2X_2.png');
+    background-image: url('img/203434.jpg');
+    background-image: url('img/Images-World-Map-Wallpapers-HD-Pictures-Desktop.jpg');
+    background-image: url('img/Best-Download-World-Map-Wallpapers-HD.jpg');
+    background-image: url('img/Backgrounds-Download-World-Map-Wallpapers-HD_3.jpg');
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar {
+    /*background-color: #006699;
+    border-color: #0099cc;*/
+    background-image: url('img/footer_lodyas.png');
+    /* Set padding to keep content from hitting the edges */
+    /*
+    background-image: url('img/logo1.jpg');
+    background-size: 100px 63px;
+    background-repeat: repeat, repeat;
+    opacity: 0.8;
+        */
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #bbbbbb;
+    /*color: #bbbbbb;*/
+}
+
+.navbar-inverse .navbar-brand {
+    color: #dddddd;
+    /*color: #cccccc;*/
+}
+
+/* by Pablito -------------------------------------------------------------------------*/
+#map_canvas {
+    height: 380px;
+}
+
+.noCol {
+    width: 5%;
+}
+
+.mapCol {
+    width: 30%;
+}
+
+.noteCol {
+    width: 50%;
+}
+
+.dateCol {
+    width: 10%;
+}
+.ptsCol, .nameCol {
+    width: 10%;
+}
+
+.editCol {
+    width: 5%;
+}
+
+.descriptionCol {
+    width: 34%;
+    color: #999999;
+}
+
+.myBtn {
+    width: 100%;
+}
+
+.myBigBtn {
+    width: 100%;
+}
+
+.panel {
+    padding: 0;
+}
+.panel-body {
+    padding: 0 14px;
+
+}
+/*.panel-heading {
+    padding: 0;
+}
+.panel-footer {
+    padding: 0;
+}*/

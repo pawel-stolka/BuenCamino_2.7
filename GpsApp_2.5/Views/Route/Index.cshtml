@@ -1,0 +1,70 @@
+﻿@model PagedList.IPagedList<GpsApp_2._5.Models.Route>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = ViewBag.RouteDescription;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-md-10">
+        <table class="table">
+            <tr>
+                <th>Map</th>
+
+                <th>Points</th>
+
+                <th>Description</th>
+
+                <th>
+                    @Html.ActionLink("Created", "Index", new {sortOrder = ViewBag.CreatedDateSortParam})
+                </th>
+
+                <th>Edit</th>
+
+                <th>
+                    @Html.ActionLink("Modified", "Index", new {sortOrder = ViewBag.ModifiedDateSortParam})
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="mapCol">
+                        @{ var buttonLabel = "Go to map " + WebUtility.HtmlDecode("&raquo;");}
+                        @Html.ActionLink(buttonLabel, "ShowPoints", new { id = item.RouteId }, new { @class = "btn btn-success myBtn" })
+                    </td>
+
+                    <td class="ptsCol">
+                        @Html.DisplayFor(modelItem => item.PointsList.Count)
+                    </td>
+                    <td class="descriptionCol">
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td class="dateCol">
+                        @Html.DisplayFor(modelItem => item.StartTime)
+                    </td>
+                    <td class="noCol">
+                        @Html.ActionLink(" ", "Edit", new { id = item.RouteId }, new { @class = "glyphicon glyphicon-edit" })
+                    </td>
+                    <td class="dateCol">
+                        @Html.DisplayFor(modelItem => item.LastModified)
+                    </td>
+                    <td class="editCol">
+                        @Html.ActionLink(" ", "Delete", new { id = item.RouteId }, new { @class = "glyphicon glyphicon-trash" })
+                    </td>
+                </tr>
+                            }
+        </table>
+        @Html.ActionLink("New Route..", "Create", null, new { @class = "btn btn-default myBigBtn" })
+    </div>
+</div>
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+            new { page, sortOrder = ViewBag.CurrentSort }))
+
+
+

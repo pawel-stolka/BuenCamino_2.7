@@ -1,0 +1,7 @@
+*.suo
+GpsApp_2.5.Tests/obj/
+GpsApp_2.5/bin/
+GpsApp_2.5/logs/
+GpsApp_2.5/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+GpsApp_2.5/obj/
+packages/

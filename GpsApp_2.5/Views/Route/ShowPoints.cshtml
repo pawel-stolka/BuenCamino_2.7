@@ -1,0 +1,161 @@
+﻿@using GpsApp_2._5.Models
+@using PagedList.Mvc
+@model PagedList.IPagedList<GpsPoint>
+@*@model IEnumerable<GpsPoint>*@
+
+@{
+    ViewBag.Title = Html.ViewBag.RouteDescription;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        @{
+            var htmlEntity = WebUtility.HtmlDecode("&laquo;");
+            var buttonLabel = htmlEntity + " Back to Routes";
+        }
+        @Html.ActionLink(buttonLabel, "Index", null, new { @class = "btn btn-info" })
+    </div>
+</div>
+
+<div class="row">
+    <!-- BEGIN MAP FIELD AREA -->
+    <div class="panel panel-info col-md-8">
+        <div class="panel-heading">
+            <div class="row">
+                &nbsp;<span id="message"></span>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div id="map_canvas"></div>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <div class="row">
+                &nbsp;
+                <div class="col-md-2 ">
+                    <span class="greyColor coords1">Latitude</span>
+                </div>
+                <div class="col-md-2 ">
+                    <span class="greyColor">Longitude</span>
+                </div>
+                <div class="col-md-2 coords2">
+                    &nbsp;<span id="clickLat"></span>
+                </div>
+                <div class="col-md-2 coords2">
+                    &nbsp;<span id="clickLng"></span>
+                </div>
+            </div>
+            <div class="row">
+                &nbsp;
+                <div class="col-md-2 greyColor">
+                    <span id="moveLat"></span>
+                </div>
+                <div class="col-md-2 greyColor">
+                    <span id="moveLng"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MAP FIELD AREA -->
+    <!-- BEGIN POINTS TABLE AREA -->
+    <div class="col-md-4">
+        <table class="table table-hover">
+            <tr>
+                <th class="noCol">
+                    #
+                </th>
+                <th class="nameCol">
+                    Place Name
+                </th>
+                <th class="dateCol">
+                    Date Time
+                </th>
+                <th class="noteCol">
+                    Note
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlaceName)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateTime)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Note)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink(" ", "Edit", "Point", new { id = item.Id }, new { @class = "glyphicon glyphicon-edit" })
+                        @Html.ActionLink(" ", "Delete", "Point", new { id = item.Id }, new { @class = "glyphicon glyphicon-trash" })
+                    </td>
+                </tr>
+            }
+        </table>
+
+        @*@Html.Hidden("RouteId")*@ 
+        <input type="hidden" value="@ViewBag.RouteId" id="RouteIdMode" />
+
+        @Html.PagedListPager(Model, page => Url.Action("ShowPoints",
+            new { @id = ViewBag.RouteId, page }))
+    </div>
+    <!-- END POINTS TABLE AREA -->
+</div>
+
+<!-- BEGIN NOTE, PHOTO AREA -->
+<div class="row">
+    <div class="col-md-8">
+        <p class="text-left">
+            <strong>Note</strong>
+        </p>
+        <div>
+            In progress...
+        </div>
+    </div>
+    <div class="col-md-4">
+        <p class="text-left">
+            <strong>Photos</strong>
+        </p>
+        <div>
+            In progress...
+        </div>
+    </div>
+</div>
+<!-- END NOTE, PHOTO AREA -->
+<hr />
+
+@*Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))*@
+
+
+@*Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount).Options(o => o
+    .PageRouteValueKey("Search.page")
+    .AlwaysAddFirstPageNumber())*@
+
+
+
+
+@section scripts {
+    <section class="scripts">
+        <script type="text/javascript" src="http://www.google.com/jsapi" charset="utf-8"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAHe_fwaA0yMF7U1jmHKYviW7EhzwXShQ&callback=Initialize"></script>
+        <script src="~/Scripts/Map.js"></script>
+        <script src="~/Scripts/Data.js"></script>
+    </section>
+}
