@@ -195,49 +195,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\img\203434.jpg" />
-    <Content Include="Content\img\Backgrounds-Download-World-Map-Wallpapers-HD.jpg" />
-    <Content Include="Content\img\Best-Download-World-Map-Wallpapers-HD.jpg" />
-    <Content Include="Content\img\binding_dark.png" />
-    <Content Include="Content\img\binding_dark_%402X.png" />
-    <Content Include="Content\img\blackorchid.png" />
-    <Content Include="Content\img\blackorchid_%402X.jpg" />
-    <Content Include="Content\img\can-stock-photo_csp19303954.jpg" />
-    <Content Include="Content\img\car-drive-road-mountain-range-summer-landscape-horizontal-banner-vector-illustration-68442310.jpg" />
-    <Content Include="Content\img\cartographer.png" />
-    <Content Include="Content\img\cartographer_%402X.png" />
-    <Content Include="Content\img\congruent_outline.png" />
-    <Content Include="Content\img\debut_dark.png" />
-    <Content Include="Content\img\Download-World-Map-Wallpapers-HD.png" />
-    <Content Include="Content\img\escheresque.png" />
-    <Content Include="Content\img\escheresque_%402X.png" />
-    <Content Include="Content\img\escheresque_ste.png" />
-    <Content Include="Content\img\escheresque_ste_%402X.png" />
-    <Content Include="Content\img\footer_lodyas.png" />
-    <Content Include="Content\img\hexabump.png" />
-    <Content Include="Content\img\Images-World-Map-Wallpapers-HD-Pictures-Desktop.jpg" />
-    <Content Include="Content\img\mochaGrunge.png" />
-    <Content Include="Content\img\mochaGrunge_%402X.png" />
-    <Content Include="Content\img\noisy_grid.png" />
-    <Content Include="Content\img\noisy_grid_%402X.png" />
-    <Content Include="Content\img\pawel.stolkaEmail.PNG" />
-    <Content Include="Content\img\pw_maze_black.png" />
-    <Content Include="Content\img\pw_maze_black_%402X.png" />
-    <Content Include="Content\img\pyramid.png" />
-    <Content Include="Content\img\pyramid_%402X.png" />
-    <Content Include="Content\img\rebel.png" />
-    <Content Include="Content\img\rebel_%402X.png" />
-    <Content Include="Content\img\seamless_paper_texture.png" />
-    <Content Include="Content\img\shattered.png" />
-    <Content Include="Content\img\stock-vector-mountains-backgrounds-with-place-for-text-set-of-outdoor-horizontal-banners-vector-templates-for-510810811.jpg" />
-    <Content Include="Content\img\subtle_carbon.png" />
-    <Content Include="Content\img\subtle_carbon_%402X.png" />
-    <Content Include="Content\img\symphony.png" />
-    <Content Include="Content\img\tweed.png" />
+    <Content Include="Content\img\Backgrounds-Download-World-Map-Wallpapers-HD_3.jpg" />
     <Content Include="Content\img\wild_oliva.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
-    <Content Include="gitignore.txt" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\Data.js" />
@@ -247,7 +208,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="NLog.config" />
-    <Content Include="gitignore" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
