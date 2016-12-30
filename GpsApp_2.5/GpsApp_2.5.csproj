@@ -196,6 +196,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\Backgrounds-Download-World-Map-Wallpapers-HD_3.jpg" />
+    <Content Include="Content\img\Backgrounds4.jpg" />
+    <Content Include="Content\img\Backgrounds5.jpg" />
+    <Content Include="Content\img\Backgrounds6.jpg" />
+    <Content Include="Content\img\olive_big.jpg" />
     <Content Include="Content\img\wild_oliva.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />

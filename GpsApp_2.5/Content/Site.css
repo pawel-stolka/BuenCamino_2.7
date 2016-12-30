@@ -1,12 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url('img/cartographer_@2X_2.png');
-    background-image: url('img/203434.jpg');
-    background-image: url('img/Images-World-Map-Wallpapers-HD-Pictures-Desktop.jpg');
-    background-image: url('img/Best-Download-World-Map-Wallpapers-HD.jpg');
-    background-image: url('img/Backgrounds-Download-World-Map-Wallpapers-HD_3.jpg');
-    background-image: url('img/Backgrounds6.jpg');
+    background-image: url('img/Backgrounds7.jpg');
     background-size: 100%;
 }
 
@@ -32,14 +27,8 @@ textarea {
 .navbar {
     /*background-color: #006699;
     border-color: #0099cc;*/
+    
     background-image: url('img/footer_lodyas.png');
-    /* Set padding to keep content from hitting the edges */
-    /*
-    background-image: url('img/logo1.jpg');
-    background-size: 100px 63px;
-    background-repeat: repeat, repeat;
-    opacity: 0.8;
-        */
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -82,7 +71,7 @@ textarea {
 
 .descriptionCol {
     width: 34%;
-    color: #999999;
+    color: #8a8989;
 }
 
 .myBtn {
@@ -91,6 +80,18 @@ textarea {
 
 .myBigBtn {
     width: 100%;
+    opacity: .5;
+    border-color: #4cae4c;
+    margin: 7px;
+}
+
+.myBigBtn:hover {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: white;
+    opacity: 1;
+    width: 100%;
+    
 }
 
 .panel {
